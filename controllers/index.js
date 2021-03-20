@@ -13,5 +13,7 @@ function natwonders(req, res) {
     res.render('wonders/natwonders', {title: `Ireland's 7 Natural Wonders`});
 }
 function historywonders(req, res) {
-    res.render('wonders/historywonders', {title: `Ireland's Historical Wonders`});
+    Wonder.find({}, function(err, wonders) {
+        res.render('wonders/historywonders', {title: `Ireland's Historical Wonders`, wonders});
+    });
 }

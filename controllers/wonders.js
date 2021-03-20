@@ -22,9 +22,15 @@ function create(req, res) {
         req.body.tourURL = req.body.tourURL.split(',')
       };
     
+    req.body.isNature = !!req.body.isNature
+    
     Wonder.create(req.body, function(err, wonder) {
         // if (err) return res.redirect('/wonders/new');
         // if (err) console.log('Error, mate.');
-        res.redirect('/wonders/historywonders');
+        if (req.body.isHistory === true) {
+            res.redirect('/wonders/historywonders');
+        } else {
+            res.redirect('/wonders/natwonders');
+        }
     })
 }

@@ -8,6 +8,7 @@ const wonderSchema = new Schema({
     mainImageURL: {type: String},
     tourText: [String],
     tourURL: [String],
+    isNature: {type: Boolean},
     // reviews: [reviewSchema]
 }, {
     timestamps: true

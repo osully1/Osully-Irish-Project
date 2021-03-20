@@ -2,5 +2,18 @@
     
 <h1> <%= title %> </h1>
 <a href='/wonders/new'>Add new wonder</a>
+<br>
+
+<div class="card-container">
+    <% wonders.forEach(function(w) { %>
+        <div class="card">
+            <img
+                src="<%= w.cardImageURL %>"
+                class="cardImage"
+            />
+            <p> <%= w.placeName %> </p>
+        </div>
+    <% }) %>
+</div>
 
 <%- include('../partials/footer') %>
