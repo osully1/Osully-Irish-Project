@@ -6,13 +6,15 @@
 
 <div class="card-container">
     <% wonders.forEach(function(w) { %>
-        <div class="card">
-            <img
-                src="<%= w.cardImageURL %>"
-                class="cardImage"
-            />
-            <p> <%= w.placeName %> </p>
-        </div>
+        <% if (w.isNature === false) { %>
+            <div class="card">
+                <img
+                    src="<%= w.cardImageURL %>"
+                    class="cardImage"
+                />
+                <p> <%= w.placeName %> </p>
+            </div>
+        <% } %>
     <% }) %>
 </div>
 
