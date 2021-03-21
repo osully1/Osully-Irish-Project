@@ -27,10 +27,10 @@ function create(req, res) {
     Wonder.create(req.body, function(err, wonder) {
         // if (err) return res.redirect('/wonders/new');
         // if (err) console.log('Error, mate.');
-        if (req.body.isHistory === true) {
-            res.redirect('/wonders/historywonders');
-        } else {
+        if (req.body.isNature === true) {
             res.redirect('/wonders/natwonders');
+        } else {
+            res.redirect('/wonders/historywonders');
         }
     })
 }
