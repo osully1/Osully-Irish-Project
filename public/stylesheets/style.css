@@ -32,37 +32,43 @@ h1 {
 .card-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 4vh auto;
 }
 
 .card {
     margin: 1rem, 0;
-    background-color: green;
+    background-color: #d5dbc6;
     padding: 2vw;
     border-radius: 5%;
-    width: 25%;
+    width: 22%;
     height: 60vh;
 }
 
 .image-container {
     align-items: center;
+    /* background: blue; */
+    height: 52%;
 }
 
 .card-image {
-    max-width: 85%;
+    width: 16vw;
+    height: 25vh;
     object-fit: contain;
-    margin: auto auto 2vh auto;
+    margin: auto;
+    display: block;
 }
 
 .card-name {
-    margin: 0 0 1vh 0;
+    margin: 0 0 1vh 1.5vw;
 }
 
 .card-description {
-    margin: auto auto 2vh auto;
+    margin: auto 1.5vw 2vh 1.5vw;
 }
 
 .explore-link {
-    margin: auto;
+    margin: auto 1.5vw auto 1.5vw;
 }
 
 .tour-links-container {
