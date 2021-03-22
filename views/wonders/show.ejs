@@ -13,6 +13,8 @@
     <a href=" <%= wonder.tourURL[2] %> " class="tour"> <%= wonder.tourText[2] %> </a>
 </div>
 <br>
+<a href="/wonders/<%= wonder._id %>/edit">Edit Entry</a>
+<br>
 <a href="/wonders/delete/delete-entry/<%= wonder._id %>">Delete Entry</a>
 
 <%- include('../partials/footer') %>

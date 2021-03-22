@@ -4,6 +4,7 @@ module.exports = {
     new: newWonder,
     create,
     show,
+    edit,
 }
 
 function show(req, res) {
@@ -20,6 +21,13 @@ function show(req, res) {
 
 function newWonder(req, res) {
     res.render('wonders/new', {title: 'Add New Wonder'});
+}
+
+function edit(req, res) {
+    Wonder.findById(req.params.id, function(err, wonder) {
+        // const wonder = Wonder.findById(req.params.id);
+        res.render('wonders/edit', { title: 'Edit Wonder', wonder,  wonderId: req.params.id });
+    })
 }
 
 function create(req, res) {
