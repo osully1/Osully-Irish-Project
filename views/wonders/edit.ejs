@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
-<h1>Edit This Entry</h1>
+<h1>Edit Entry: <%= wonder.placeName %></h1>
 
-<form id="new-form" action="/wonders" method="POST">
+<form id="new-form" action="/wonders/<%= wonder._id %>?_method=PUT" method="POST">
     <label>Name</label>
     <input type="text" name="placeName" value="<%= wonder.placeName %>">
     <label>Card Image URL</label>
@@ -25,7 +25,7 @@
         </label>
         <p class="hswitch">Natural Wonder</p>
     </div>
-    <input type="submit" value="Add New Wonder">
+    <input type="submit" value="Edit Entry">
 </form>
 
 <%- include('../partials/footer') %>

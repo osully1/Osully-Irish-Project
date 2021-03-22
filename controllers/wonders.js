@@ -5,6 +5,7 @@ module.exports = {
     create,
     show,
     edit,
+    update,
 }
 
 function show(req, res) {
@@ -28,6 +29,17 @@ function edit(req, res) {
         // const wonder = Wonder.findById(req.params.id);
         res.render('wonders/edit', { title: 'Edit Wonder', wonder,  wonderId: req.params.id });
     })
+}
+
+function update (req, res) {
+    req.body.done = false;
+    Wonder.findByIdAndUpdate(req.params.id, req.body, function(err, doc) {
+        if (doc.isNature === true) {
+            res.redirect('/wonders/natwonders');
+        } else if (doc.isNature === false) {
+            res.redirect('/wonders/historywonders');
+        }
+    });
 }
 
 function create(req, res) {
