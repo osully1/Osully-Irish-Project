@@ -3,6 +3,19 @@ const Wonder = require('../models/wonder');
 module.exports = {
     new: newWonder,
     create,
+    show,
+}
+
+function show(req, res) {
+    Wonder.findById(req.params.id, function(err, wonder) {
+
+        res.render('wonders/show', { title: wonder.placeName, wonder })
+        // if (req.params.isNature === true) {
+        //     res.render('wonders/natwonders/:id', {wonder})
+        // } else {
+        //     res.render('wonders/historywonders/:id')
+        // }
+    })
 }
 
 function newWonder(req, res) {

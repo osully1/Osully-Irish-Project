@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h1> <%= title %> </h1>
+<h1> <%= wonder.placeName %> </h1>
 
 
 
@@ -8,9 +8,9 @@
 
 <div class="tour-links-container">
     <p class="tour-links-word">Tour Links</p>
-    <a href=" <%= w.tourURL[0] %> " class="tour"> <%= w.tourText[0] %> </a>
-    <a href=" <%= w.tourURL[1] %> " class="tour"> <%= w.tourText[1] %> </a>
-    <a href=" <%= w.tourURL[2] %> " class="tour"> <%= w.tourText[2] %> </a>
+    <a href=" <%= wonder.tourURL[0] %> " class="tour"> <%= wonder.tourText[0] %> </a>
+    <a href=" <%= wonder.tourURL[1] %> " class="tour"> <%= wonder.tourText[1] %> </a>
+    <a href=" <%= wonder.tourURL[2] %> " class="tour"> <%= wonder.tourText[2] %> </a>
 </div>
 
 
