@@ -1,0 +1,29 @@
+<%- include('../../partials/header') %>
+
+
+
+<h1>Are you sure you want to delete this entry?</h1>
+
+<div class="card delete-card">
+    <div class="image-container">
+        <img
+            src="<%= wonder.cardImageURL %>"
+            class="card-image"
+        />
+    </div>
+    <h3 class="card-name"> <%= wonder.placeName %> </h3>
+    <p class="card-description"> <%= wonder.description %> </p>
+</div>
+<div class="yes-no-button-container">
+    <% if (wonder.isNature === true) { %>
+        <form action="/wonders/<%= wonder._id %>?_method=DELETE" method="post">
+            <button type="submit" class="delete-button">Yes, I'm sure.</button>
+        </form>
+    <% } else if (wonder.isNature === false) { %>
+        <form action="/wonders/<%= wonder._id %>?_method=DELETE" method="post">
+            <button type="submit" class="delete-button">Yes, I'm sure.</button>
+        </form>
+    <% } %>
+    <a href="/wonders/<%= wonder._id %>">No, take me back.</a>
+</div>
+<%- include('../../partials/footer') %>

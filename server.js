@@ -1,11 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 const port = 3000;
+const methodOverride = require('method-override');
 require("./config/database");
 
 // Require routers
 const indexRouter = require('./routes/index');
 const wondersRouter = require('./routes/wonders');
+const deleteRouter = require('./routes/delete')
 
 // Set up express
 const app = express();
@@ -19,10 +21,12 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 // Mount routes with app.use()
 app.use('/', indexRouter);
 app.use('/wonders', wondersRouter);
+app.use('/wonders', deleteRouter);
 
 // Tell App to listen
 app.listen(port, function() {

@@ -3,20 +3,26 @@
 <h1>Enter New Historical Site Information</h1>
 
 <form id="new-form" action="/wonders" method="POST">
-    <label>Name</label>
-    <input type="text" name="placeName">
-    <label>Card Description</label>
-    <input type="text" name="description">
-    <label>Main Description</label>
-    <input type="text" name="descriptionMain">
-    <label>Card Image URL</label>
-    <input type="text" name="cardImageURL">
-    <label>Main Image URL</label>
-    <input type="text" name="mainImageURL">
-    <label>Tour Website Name</label>
-    <input type="text" name="tourText">
-    <label>Tour Website Link</label>
-    <input type="text" name="tourURL">
+    <!-- <div class="new-stuff-container"> -->
+        <!-- <div class="new-stuff new-stuff-1"> -->
+            <label>Name</label>
+            <input type="text" name="placeName">
+            <label>Card Image URL</label>
+            <input type="text" name="cardImageURL">
+            <label>Main Image URL</label>
+            <input type="text" name="mainImageURL">
+            <label>Tour Website Name</label>
+            <input type="text" name="tourText">
+            <label>Tour Website Link</label>
+            <input type="text" name="tourURL">
+        <!-- </div> -->
+        <!-- <div class="new-stuff new-stuff-2"> -->
+            <label>Card Description</label>
+            <textarea name="description"></textarea>
+            <label>Main Description</label>
+            <textarea name="descriptionMain"></textarea>
+        <!-- </div> -->
+    <!-- </div> -->
     <div class="switchbox">
         <p class="hswitch">Historical Site</p>
         <label class="switch">
