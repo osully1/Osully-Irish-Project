@@ -148,7 +148,8 @@ h1 {
 }
 
 .edit-delete-links {
-    
+    float: right;
+    margin: -4vh 1.5vw 0 0;
 }
 
 .delete-card {
