@@ -22,12 +22,7 @@ function show(req, res) {
 // }
 
 function deleteWonder(req, res) {
-    Wonder.findOne({_id:req.params.id}).exec(function(err, entry){
-        if(entry) {
-           entry.remove();
-        }
+    Wonder.findByIdAndDelete({_id:req.params.id}).exec(function(err, entry){
+        res.redirect('historywonders');
     })
-    Wonder.find({}, function(err, wonders) {
-        res.render('wonders/historywonders', {title: `Ireland's Historical Wonders`, wonders});
-    });
 }
