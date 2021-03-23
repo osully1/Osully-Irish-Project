@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
 *,
 *::before,
 *::after {
@@ -7,23 +9,12 @@
 }
 
 body {
+    font-family: 'Poppins';
     height: 100vh;
     width: 100vw;
-    /* background-image: linear-gradient(90deg,#169B62 33.33%, white 33.33%, white 66.66%, #FF883E 66.66%); */
-
-    /* background-image: linear-gradient(to right, #41A4F8, #40A3F8, #3EA2F7, #3EA2F7, #3FA1F6, #3DA1F6, #3DA0F7, #3FA1F6, #3EA2F7, #41A4F9, #42A6F7, #3FA2F5, #42A5F8, #43A5F6, #42A6F7, #44A6F9, #43A5F6, #44A6F9, #42A6F7, #45A8FB, #47A7F8, #49AAF9, #47ABF9, #4CAAFC, #4BABFB, #4EAEFA, #50B0FC, #4BABFB, #4EAEFA, #50B0FC, #56B1FA, #55B2FB); */
-
-    /* background-blend-mode: screen; */
-
-    /* background-image: url('../images/ireland-background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: bottom center;
-    background-size: 100% 100%; */
 }
 
 .test-background {
-    /* background-color: #3DA0F7; */
     background-color: #44A6F9 
 }
 
@@ -73,11 +64,21 @@ h1 {
 .card {
     margin-top: 5vh;
     background-color: #dce2cd;
-    /* background-color: #1ABC9C; */
     padding: 2vw;
     border-radius: 5%;
     width: 22%;
     height: 60vh;
+    box-shadow: 10px 10px #3786ca;
+}
+
+.card-main {
+    display: block;
+    margin: auto;
+    /* margin-top: 5vh; */
+    background-color: #dce2cd;
+    padding: 2vw;
+    border-radius: 5%;
+    width: 70%;
     box-shadow: 10px 10px #3786ca;
 }
 
@@ -95,8 +96,21 @@ h1 {
     display: block;
 }
 
+.main-image {
+    width: 80%;
+    /* height: 25vh; */
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
 .card-name {
-    margin: 0 0 1vh 1.5vw;
+    margin: -3.1vh 0 1vh 1.5vw;
+}
+
+.card-name-main {
+    text-align: center;
+    margin: -1vh auto 1vh auto;
 }
 
 .card-description {
@@ -122,14 +136,19 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 1.5vw;
 }
 
 .tour-links-word {
-    margin: 2vh 0 1vh 0;
+    margin: 4vh 0 1vh 1.5vw;
 }
 
 .tour {
     margin: 0.3vh;
+}
+
+.edit-delete-links {
+    
 }
 
 .delete-card {

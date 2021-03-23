@@ -1,20 +1,24 @@
 <%- include('../partials/header') %>
-
-<h1> <%= wonder.placeName %> </h1>
-
-<img src="<%= wonder.mainImageURL %>" class="main-image"/>
-
-<p><%= wonder.descriptionMain %></p>
-
-<p class="tour-links-word">Tour Links</p>
-<div class="tour-links-container">
-    <a href=" <%= wonder.tourURL1 %> " class="tour" target="_blank"> <%= wonder.tourText1 %> </a>
-    <a href=" <%= wonder.tourURL2 %> " class="tour" target="_blank"> <%= wonder.tourText2 %> </a>
-    <a href=" <%= wonder.tourURL3 %> " class="tour" target="_blank"> <%= wonder.tourText3 %> </a>
+<div class="card-main">
+    <div class="image-container">
+        <img src="<%= wonder.mainImageURL %>" class="main-image"/>
+    </div>
+    <br>
+    <h1 class="card-name-main"> <%= wonder.placeName %> </h1>
+    <p class="card-description"> <%= wonder.descriptionMain %> </p>
+    <p class="tour-links-word">Tour Links</p>
+    <div class="tour-links-container">
+        <a href=" <%= wonder.tourURL1 %> " class="tour" target="_blank"> <%= wonder.tourText1 %> </a>
+        <a href=" <%= wonder.tourURL2 %> " class="tour" target="_blank"> <%= wonder.tourText2 %> </a>
+        <a href=" <%= wonder.tourURL3 %> " class="tour" target="_blank"> <%= wonder.tourText3 %> </a>
+    </div>
 </div>
+
 <br>
+<div class="edit-delete-links">
 <a href="/wonders/<%= wonder._id %>/edit">Edit Entry</a>
 <br>
 <a href="/wonders/delete/delete-entry/<%= wonder._id %>">Delete Entry</a>
+</div>
 
 <%- include('../partials/footer') %>
