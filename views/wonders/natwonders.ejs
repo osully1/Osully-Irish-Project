@@ -1,5 +1,25 @@
 <%- include('../partials/header') %>
-
+    
 <h1> <%= title %> </h1>
+<a href='/wonders/new'>Add new wonder</a>
+<br>
+
+<div class="card-container">
+    <% wonders.forEach(function(w) { %>
+        <% if (w.isNature === true) { %>
+            <div class="card">
+                <div class="image-container">
+                    <img
+                        src="<%= w.cardImageURL %>"
+                        class="card-image"
+                    />
+                </div>
+                <h3 class="card-name"> <%= w.placeName %> </h3>
+                <p class="card-description"> <%= w.description %> </p>
+                <a href="/wonders/<%= w._id %>" class="explore-link">Explore</a>
+            </div>
+        <% } %>
+    <% }) %>
+</div>
 
 <%- include('../partials/footer') %>

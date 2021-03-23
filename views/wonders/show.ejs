@@ -2,15 +2,15 @@
 
 <h1> <%= wonder.placeName %> </h1>
 
+<img src="<%= wonder.mainImageURL %>" class="main-image"/>
 
+<p><%= wonder.descriptionMain %></p>
 
-
-
+<p class="tour-links-word">Tour Links</p>
 <div class="tour-links-container">
-    <p class="tour-links-word">Tour Links</p>
-    <a href=" <%= wonder.tourURL[0] %> " class="tour"> <%= wonder.tourText[0] %> </a>
-    <a href=" <%= wonder.tourURL[1] %> " class="tour"> <%= wonder.tourText[1] %> </a>
-    <a href=" <%= wonder.tourURL[2] %> " class="tour"> <%= wonder.tourText[2] %> </a>
+    <a href=" <%= wonder.tourURL1 %> " class="tour" target="_blank"> <%= wonder.tourText1 %> </a>
+    <a href=" <%= wonder.tourURL2 %> " class="tour" target="_blank"> <%= wonder.tourText2 %> </a>
+    <a href=" <%= wonder.tourURL3 %> " class="tour" target="_blank"> <%= wonder.tourText3 %> </a>
 </div>
 <br>
 <a href="/wonders/<%= wonder._id %>/edit">Edit Entry</a>

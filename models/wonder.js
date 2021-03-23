@@ -7,8 +7,12 @@ const wonderSchema = new Schema({
     descriptionMain: {type: String},
     cardImageURL: {type: String},
     mainImageURL: {type: String},
-    tourText: [String],
-    tourURL: [String],
+    tourText1: {type: String},
+    tourText2: {type: String},
+    tourText3: {type: String},
+    tourURL1: {type: String},
+    tourURL2: {type: String},
+    tourURL3: {type: String},
     isNature: {type: Boolean},
     // reviews: [reviewSchema]
 }, {
