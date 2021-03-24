@@ -18,6 +18,6 @@ function historywonders(req, res) {
 
 function natwonders(req, res) {
     Wonder.find({}, function(err, wonders) {
-        res.render('wonders/natwonders', {title: `Ireland's 7 Natural Wonders`, wonders});
+        res.render('wonders/natwonders', {title: `Ireland's Natural Wonders`, wonders});
     });
 }

@@ -33,6 +33,7 @@ function edit(req, res) {
 
 function update (req, res) {
     req.body.done = false;
+    req.body.isNature = !!req.body.isNature
     Wonder.findByIdAndUpdate(req.params.id, req.body, function(err, doc) {
         if (doc.isNature === true) {
             res.redirect('/wonders/natwonders');

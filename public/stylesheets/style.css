@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400;1,900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -30,13 +32,72 @@ body {
     background-size: 100% 100%;
 }
 
+nav {
+    grid-area: nav;
+    background-color: #BFD3BB;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 30px;
+}
+
+.nav-title-container {
+    text-align: center;
+    font-family: 'Irish Grover';
+    font-size: 100%;
+    color: #146849;
+}
+
+.nav-link-container {
+    margin-left: auto;
+}
+
+.nav-link {
+    text-align: center;
+    justify-self: flex-end;
+    background-color: #85AE28;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 7%;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
+.nav-link:hover {
+    background-color: #4F751B;
+    color: white;
+}
+
+.nav-title {
+    margin-left: 2vw;
+    font-size: 120%;
+}
+
+.nav-osully {
+    font-size: 160%;
+}
+
 h1 {
     text-align: center;
 }
 
-.index-h1 {
+.page-title {
     font-family: 'Irish Grover';
     color: #146849;
+    text-shadow: 1px 1px 1px #758d79,
+    1px 1px 1px #758d79,
+    1px 1px 1px #758d79,
+    1px 1px 1px #758d79,
+    1px 2px 1px #758d79,
+    1px 3px 1px #758d79,
+    1px 4px 1px #758d79,
+    1px 5px 1px #758d79,
+    1px 6px 1px #758d79,
+    1px 6px 1px #758d79,
+1px 18px 6px rgba(16,16,16,0.4),
+1px 22px 10px rgba(16,16,16,0.2),
+1px 25px 35px rgba(16,16,16,0.2),
+1px 30px 60px rgba(16,16,16,0.4);
 }
 
 .index-h3 {
@@ -47,6 +108,7 @@ h1 {
 
 .osully {
     font-size: 600%;
+    margin-top: 4vh;
     text-shadow: 1px 1px 1px #758d79,
     1px 2px 1px #758d79,
     1px 3px 1px #758d79,
@@ -67,20 +129,12 @@ h1 {
     font-size: 300%;
     word-spacing: 3vw;
     margin: 1vh auto auto auto;
-    text-shadow: 1px 1px 1px #758d79,
-    1px 1px 1px #758d79,
-    1px 1px 1px #758d79,
-    1px 1px 1px #758d79,
-    1px 2px 1px #758d79,
-    1px 3px 1px #758d79,
-    1px 4px 1px #758d79,
-    1px 5px 1px #758d79,
-    1px 6px 1px #758d79,
-    1px 6px 1px #758d79,
-1px 18px 6px rgba(16,16,16,0.4),
-1px 22px 10px rgba(16,16,16,0.2),
-1px 25px 35px rgba(16,16,16,0.2),
-1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.menu-title {
+    margin-top: 3vh;
+    font-family: 'Irish Grover';
+    font-size: 350%;
 }
 
 #new-form {
@@ -145,7 +199,7 @@ h1 {
 
 .card-main {
     display: block;
-    margin: 3vh auto auto auto;
+    margin: 6vh auto auto auto;
     /* margin-top: 5vh; */
     background-color: #bfd3bb;
     padding: 2vw;
@@ -181,6 +235,7 @@ h1 {
     object-fit: contain;
     margin: auto;
     display: block;
+    border-radius: 5%;
 }
 
 .index-image-container {
