@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
 *,
 *::before,
 *::after {
@@ -12,11 +14,12 @@ body {
     font-family: 'Poppins';
     height: 100vh;
     width: 100vw;
+    background-color: #44A6F9
 }
 
-.test-background {
+/* .test-background {
     background-color: #44A6F9 
-}
+} */
 
 .bottom-background {
     height: 1100px;
@@ -29,6 +32,55 @@ body {
 
 h1 {
     text-align: center;
+}
+
+.index-h1 {
+    font-family: 'Irish Grover';
+    color: #146849;
+}
+
+.index-h3 {
+    display: block;
+    text-align: center;
+    margin: 4vh auto auto auto;
+}
+
+.osully {
+    font-size: 600%;
+    text-shadow: 1px 1px 1px #758d79,
+    1px 2px 1px #758d79,
+    1px 3px 1px #758d79,
+    1px 4px 1px #758d79,
+    1px 5px 1px #758d79,
+    1px 6px 1px #758d79,
+    1px 7px 1px #758d79,
+    1px 8px 1px #758d79,
+    1px 9px 1px #758d79,
+    1px 10px 1px #758d79,
+1px 18px 6px rgba(16,16,16,0.4),
+1px 22px 10px rgba(16,16,16,0.2),
+1px 25px 35px rgba(16,16,16,0.2),
+1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.wonders-of {
+    font-size: 300%;
+    word-spacing: 3vw;
+    margin: 1vh auto auto auto;
+    text-shadow: 1px 1px 1px #758d79,
+    1px 1px 1px #758d79,
+    1px 1px 1px #758d79,
+    1px 1px 1px #758d79,
+    1px 2px 1px #758d79,
+    1px 3px 1px #758d79,
+    1px 4px 1px #758d79,
+    1px 5px 1px #758d79,
+    1px 6px 1px #758d79,
+    1px 6px 1px #758d79,
+1px 18px 6px rgba(16,16,16,0.4),
+1px 22px 10px rgba(16,16,16,0.2),
+1px 25px 35px rgba(16,16,16,0.2),
+1px 30px 60px rgba(16,16,16,0.4);
 }
 
 #new-form {
@@ -54,6 +106,10 @@ h1 {
     color: black;
 }
 
+.new-form {
+    margin: 10vh, auto auto auto;
+}
+
 .card-container {
     display: flex;
     justify-content: space-around;
@@ -61,9 +117,14 @@ h1 {
     margin: 4vh auto;
 }
 
+.index-card-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 .card {
     margin-top: 5vh;
-    background-color: #dce2cd;
+    background-color: #bfd3bb;
     padding: 2vw;
     border-radius: 5%;
     width: 22%;
@@ -71,11 +132,22 @@ h1 {
     box-shadow: 10px 10px #3786ca;
 }
 
+.card-index {
+    display: inline-block;
+    margin: 9vh auto auto auto;
+    /* margin-top: 5vh; */
+    background-color: #bfd3bb;
+    padding: 2vw;
+    border-radius: 5%;
+    width: 40%;
+    box-shadow: 10px 10px #3786ca;
+}
+
 .card-main {
     display: block;
-    margin: auto;
+    margin: 3vh auto auto auto;
     /* margin-top: 5vh; */
-    background-color: #dce2cd;
+    background-color: #bfd3bb;
     padding: 2vw;
     border-radius: 5%;
     width: 70%;
@@ -104,6 +176,20 @@ h1 {
     display: block;
 }
 
+.index-image {
+    width: 98.5%;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
+.index-image-container {
+    display: flex;
+    justify-content: center;
+    height: 52vh;
+    /* background: red; */
+}
+
 .card-name {
     margin: -3.1vh 0 1vh 1.5vw;
 }
@@ -113,8 +199,23 @@ h1 {
     margin: -1vh auto 1vh auto;
 }
 
+.card-name-index {
+    margin: auto auto 2vh auto
+}
+
 .card-description {
     margin: auto 1.5vw 2vh 1.5vw;
+}
+
+.index-description-container {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.index-description {
+    font-size: 125%;
+    line-height: 1.8;
 }
 
 .explore-link {
@@ -130,6 +231,14 @@ h1 {
 .explore-link:hover {
     background-color: #7CC303;
     color: black;
+}
+
+.index-explore-link {
+    display: block;
+    margin: 3vh auto auto auto;
+    text-align: center;
+    width: 30%;
+    border-radius: 5%;
 }
 
 .tour-links-container {
@@ -149,7 +258,7 @@ h1 {
 
 .edit-delete-links {
     float: right;
-    margin: -4vh 1.5vw 0 0;
+    margin: -7vh 1.5vw 0 0;
 }
 
 .delete-card {

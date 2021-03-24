@@ -1,7 +1,29 @@
 <%- include('./partials/header') %>
 
-<h1>O'Sully's Wonders of Ireland</h1>
-<a href="/wonders/natwonders">Explore Natural Wonders</a>
-<a href="/wonders/historywonders">Explore Historical Wonders</a>
-
+<h1 class="index-h1 osully">O'Sully's</h1>
+<h1 class="index-h1 wonders-of"> Wonders of Ireland</h1>
+<div class="index-card-container">
+    <div class="card-index">
+        <div class="image-container index-image-container">
+            <img src="../images/moher-reduced.jpg" class="index-image"/>
+        </div>
+        <br>
+        <h1 class="card-name-index"> Explore Natural Wonders </h1>
+        <div class="index-description-container">
+            <p class="index-description">From dizzying cliffs to ancient volacnic geometry, Ireland's Seven Natural Wonders have inspired poets and pilgrims, wanderers and wayfarers for centuries.</p>
+        </div>
+        <a href="/wonders/natwonders" class="explore-link index-explore-link">Natural Wonders</a>
+    </div>
+    <div class="card-index">
+        <div class="image-container index-image-container">
+            <img src="../images/christ-church.jpeg" class="index-image"/>
+        </div>
+        <br>
+        <h1 class="card-name-index"> Explore Historical Wonders </h1>
+        <div class="index-description-container">
+            <p class="index-description">From dizzying cliffs to ancient volacnic geometry, Ireland's Seven Natural Wonders have inspired poets and pilgrims, wanderers and wayfarers for centuries.</p>
+        </div>
+        <a href="/wonders/historywonders" class="explore-link index-explore-link">Hisorical Wonders</a>
+    </div>
+</div>
 <%- include('./partials/footer') %>
