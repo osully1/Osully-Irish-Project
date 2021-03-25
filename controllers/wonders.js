@@ -26,7 +26,6 @@ function newWonder(req, res) {
 
 function edit(req, res) {
     Wonder.findById(req.params.id, function(err, wonder) {
-        // const wonder = Wonder.findById(req.params.id);
         res.render('wonders/edit', { title: 'Edit Wonder', wonder,  wonderId: req.params.id });
     })
 }
@@ -36,9 +35,9 @@ function update (req, res) {
     req.body.isNature = !!req.body.isNature
     Wonder.findByIdAndUpdate(req.params.id, req.body, function(err, doc) {
         if (doc.isNature === true) {
-            res.redirect('/wonders/natwonders');
+            res.redirect('/wonders/' + req.params.id);
         } else if (doc.isNature === false) {
-            res.redirect('/wonders/historywonders');
+            res.redirect('/wonders/' + req.params.id);
         }
     });
 }

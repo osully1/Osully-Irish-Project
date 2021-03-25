@@ -4,7 +4,10 @@ const Schema = mongoose.Schema;
 const wonderSchema = new Schema({
     placeName: {type: String, required: true},
     description: {type: String},
-    descriptionMain: {type: String},
+    descriptionMain1: {type: String},
+    descriptionMain2: {type: String},
+    descriptionMain3: {type: String},
+    descriptionMain4: {type: String},
     cardImageURL: {type: String},
     mainImageURL: {type: String},
     tourText1: {type: String},
